@@ -6,13 +6,17 @@
   <title>Kalkulator Rumus Fisika SMP</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
   <div class="container mt-5">
-    <h1 class="text-center">Kalkulator Rumus Fisika SMP</h1>
+    <h1 class="text-center">📚 Kalkulator Rumus Fisika SMP 📐</h1>
+    
+    <!-- Rumus Gaya -->
     <div class="card mt-4">
       <div class="card-body">
         <h3>Rumus Gaya (F = m × a)</h3>
+        <p>Menghitung Gaya dengan menggunakan Massa (m) dan Percepatan (a)</p>
         <form id="forceForm">
           <div class="form-group">
             <label for="mass">Massa (kg):</label>
@@ -22,15 +26,17 @@
             <label for="acceleration">Percepatan (m/s²):</label>
             <input type="number" id="acceleration" class="form-control" required>
           </div>
-          <button type="button" class="btn btn-primary" onclick="calculateForce()">Hitung Gaya</button>
+          <button type="button" class="btn btn-primary btn-block" onclick="calculateForce()">Hitung Gaya</button>
         </form>
-        <p class="mt-3">Hasil Gaya: <span id="forceResult">-</span> N</p>
+        <p class="mt-3">Hasil Gaya: <span id="forceResult" class="result">-</span> </p>
       </div>
     </div>
     
+    <!-- Rumus Tekanan -->
     <div class="card mt-4">
       <div class="card-body">
         <h3>Rumus Tekanan (P = F / A)</h3>
+        <p>Menghitung Tekanan dengan Gaya (F) dan Luas Permukaan (A)</p>
         <form id="pressureForm">
           <div class="form-group">
             <label for="force">Gaya (N):</label>
@@ -40,15 +46,17 @@
             <label for="area">Luas Permukaan (m²):</label>
             <input type="number" id="area" class="form-control" required>
           </div>
-          <button type="button" class="btn btn-primary" onclick="calculatePressure()">Hitung Tekanan</button>
+          <button type="button" class="btn btn-primary btn-block" onclick="calculatePressure()">Hitung Tekanan</button>
         </form>
-        <p class="mt-3">Hasil Tekanan: <span id="pressureResult">-</span> Pa</p>
+        <p class="mt-3">Hasil Tekanan: <span id="pressureResult" class="result">-</span> </p>
       </div>
     </div>
 
+    <!-- Rumus Kecepatan -->
     <div class="card mt-4">
       <div class="card-body">
         <h3>Rumus Kecepatan (v = s / t)</h3>
+        <p>Menghitung Kecepatan dengan Jarak Tempuh (s) dan Waktu (t)</p>
         <form id="velocityForm">
           <div class="form-group">
             <label for="distance">Jarak Tempuh (m):</label>
@@ -58,56 +66,57 @@
             <label for="time">Waktu (s):</label>
             <input type="number" id="time" class="form-control" required>
           </div>
-          <button type="button" class="btn btn-primary" onclick="calculateVelocity()">Hitung Kecepatan</button>
+          <button type="button" class="btn btn-primary btn-block" onclick="calculateVelocity()">Hitung Kecepatan</button>
         </form>
-        <p class="mt-3">Hasil Kecepatan: <span id="velocityResult">-</span> m/s</p>
+        <p class="mt-3">Hasil Kecepatan: <span id="velocityResult" class="result">-</span> </p>
       </div>
-      <div class="card mt-4">
-        <div class="card-body">
-          <h3>Hukum Archimedes (Fa = ρ × g × V)</h3>
-          <form id="archimedesForm">
-            <div class="form-group">
-              <label for="density">Massa Jenis Cairan (kg/m³):</label>
-              <input type="number" id="density" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label for="gravity">Percepatan Gravitasi (m/s²):</label>
-              <input type="number" id="gravity" value="9.8" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label for="volume">Volume Benda yang Tenggelam (m³):</label>
-              <input type="number" id="volume" class="form-control" required>
-            </div>
-            <button type="button" class="btn btn-primary" onclick="calculateBuoyantForce()">Hitung Gaya Angkat</button>
-          </form>
-          <p class="mt-3">Hasil Gaya Angkat: <span id="archimedesResult">-</span> N</p>
-        </div>
+    </div>
+    
+    <!-- Hukum Archimedes -->
+    <div class="card mt-4">
+      <div class="card-body">
+        <h3>Hukum Archimedes (Fa = ρ × g × V)</h3>
+        <p>Menghitung Gaya Angkat menggunakan Massa Jenis Cairan, Gravitasi, dan Volume</p>
+        <form id="archimedesForm">
+          <div class="form-group">
+            <label for="density">Massa Jenis Cairan (kg/m³):</label>
+            <input type="number" id="density" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="gravity">Percepatan Gravitasi (m/s²):</label>
+            <input type="number" id="gravity" value="9.8" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="volume">Volume Benda yang Tenggelam (m³):</label>
+            <input type="number" id="volume" class="form-control" required>
+          </div>
+          <button type="button" class="btn btn-primary btn-block" onclick="calculateBuoyantForce()">Hitung Gaya Angkat</button>
+        </form>
+        <p class="mt-3">Hasil Gaya Angkat: <span id="archimedesResult" class="result">-</span> </p>
       </div>
-      
-      <div class="card mt-4">
-        <div class="card-body">
-          <h3>Hukum Ohm (V = I × R)</h3>
-          <form id="ohmForm">
-            <div class="form-group">
-              <label for="current">Arus Listrik (I) dalam Ampere:</label>
-              <input type="number" id="current" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label for="resistance">Hambatan (R) dalam Ohm:</label>
-              <input type="number" id="resistance" class="form-control" required>
-            </div>
-            <button type="button" class="btn btn-primary" onclick="calculateVoltage()">Hitung Tegangan</button>
-          </form>
-          <p class="mt-3">Hasil Tegangan: <span id="ohmResult">-</span> V</p>
-        </div>
+    </div>
+    
+    <!-- Hukum Ohm -->
+    <div class="card mt-4">
+      <div class="card-body">
+        <h3>Hukum Ohm (V = I × R)</h3>
+        <p>Menghitung Tegangan menggunakan Arus Listrik (I) dan Hambatan (R)</p>
+        <form id="ohmForm">
+          <div class="form-group">
+            <label for="current">Arus Listrik (I) dalam Ampere:</label>
+            <input type="number" id="current" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="resistance">Hambatan (R) dalam Ohm:</label>
+            <input type="number" id="resistance" class="form-control" required>
+          </div>
+          <button type="button" class="btn btn-primary btn-block" onclick="calculateVoltage()">Hitung Tegangan</button>
+        </form>
+        <p class="mt-3">Hasil Tegangan: <span id="ohmResult" class="result">-</span> V</p>
       </div>
-      
     </div>
   </div>
-
+  
   <script src="script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
