@@ -1,79 +1,32 @@
 body {
-    background-color: #f3f4f6;
-  }
-  
-  h1, h3 {
-    color: #444;
-  }
-  
-  .card {
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    color: #fff;
-  }
-  
-  /* Warna yang berbeda untuk setiap kalkulator */
-  #forceForm {
-    background-color: #20c11d;
-  }
-  
-  #pressureForm {
-    background-color: #4ecdc4;
-  }
-  
-  #velocityForm {
-    background-color: #ffcc5c;
-  }
-  
-  /* Warna tombol */
-  .btn-primary {
-    background-color: #1f8ef1;
-    border-color: #1f8ef1;
-    color: #fff;
-    font-weight: bold;
-  }
-  
-  .btn-primary:hover {
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  
-  /* Gaya hasil */
-  p {
-    font-size: 1.2rem;
-  }
-  
-  #forceResult {
-    color: #ff6b6b;
-    font-weight: bold;
-  }
-  
-  #pressureResult {
-    color: #4ecdc4;
-    font-weight: bold;
-  }
-  
-  #velocityResult {
-    color: #ffcc5c;
-    font-weight: bold;
-  }
-  #archimedesForm {
-    background-color: #48dbfb;
-  }
-  
-  #ohmForm {
-    background-color: #ff9ff3;
-  }
-  
-  #archimedesResult {
-    color: #48dbfb;
-    font-weight: bold;
-  }
-  
-  #ohmResult {
-    color: #ff9ff3;
-    font-weight: bold;
-  }
-  
+  background-color: #f0f8ff;
+  font-family: Arial, sans-serif;
+}
+h1 {
+  color: #4A90E2;
+  font-weight: bold;
+}
+.card {
+  background-color: #e8f4ff;
+  border-radius: 10px;
+  border: none;
+}
+.card-body {
+  color: #333;
+}
+.btn-primary {
+  background-color: #4A90E2;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #357ABD;
+}
+label {
+  font-weight: bold;
+  color: #333;
+}
+.result {
+  font-weight: bold;
+  color: #4A90E2;
+}
   
